@@ -3,7 +3,7 @@ require 'rails_helper'
 
 RSpec.describe 'Products API', type: :request do
   # initialize test data 
-  let!(:products) { create_list(:product, 10) }
+  let!(:products) { create_list(:product, 10, product_key: 2) }
   let(:id) { products.first.id }
 
   # Test suite for GET /products
@@ -53,13 +53,13 @@ RSpec.describe 'Products API', type: :request do
   # Test suite for POST /products
   describe 'POST /products' do
     # valid payload
-    let(:valid_attributes) { { product_id: 1, product_name: 'name 1', product_image: 'string.file', product_description: "description" } }
+    let(:valid_attributes) { { product_key: 2, product_name: 'string' , product_image: 'string', product_description: 'string' } }
 
     context 'when the request is valid' do
       before { post '/products', params: valid_attributes }
 
       it 'creates a product' do
-        expect(json['product_id']).to eq(1)
+        expect(json['product_key']).to eq(2)
       end
 
       it 'returns status code 201' do
@@ -68,7 +68,7 @@ RSpec.describe 'Products API', type: :request do
     end
 
     context 'when the request is invalid' do
-      before { post '/products', params: { product_id: 2 } }
+      before { post '/products', params: { product_key: 2 } }
 
       it 'returns status code 422' do
         expect(response).to have_http_status(422)
@@ -83,7 +83,7 @@ RSpec.describe 'Products API', type: :request do
 
   # Test suite for PUT /products/:id
   describe 'PUT /products/:id' do
-    let(:valid_attributes) { { product_id: 2 } }
+    let(:valid_attributes) { { product_key: 2 } }
 
     context 'when the record exists' do
       before { put "/products/#{id}", params: valid_attributes }

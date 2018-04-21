@@ -5,6 +5,7 @@ class CreateItems < ActiveRecord::Migration[5.1]
       t.integer :length
       t.references :product, foreign_key: true
       t.string :style
+      t.integer :product_key
       t.integer :count
 
       t.timestamps

@@ -5,7 +5,7 @@ RSpec.describe Product, type: :model do
   # ensure Todo model has a 1:m relationship with the Item model
   it { should have_many(:items).dependent(:destroy) }
   # Validation tests
-  it { should validate_presence_of(:product_id) }
+  it { should validate_presence_of(:product_key) }
   it { should validate_presence_of(:product_name) }
   it { should validate_presence_of(:product_image) }
   it { should validate_presence_of(:product_description) }

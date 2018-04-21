@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(version: 20180421043338) do
     t.integer "length"
     t.bigint "product_id"
     t.string "style"
+    t.integer "product_key"
     t.integer "count"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -27,7 +28,7 @@ ActiveRecord::Schema.define(version: 20180421043338) do
   end
 
   create_table "products", force: :cascade do |t|
-    t.integer "product_id"
+    t.integer "product_key"
     t.string "product_name"
     t.string "product_image"
     t.string "product_description"
