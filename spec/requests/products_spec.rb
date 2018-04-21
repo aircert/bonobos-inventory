@@ -53,13 +53,13 @@ RSpec.describe 'Products API', type: :request do
   # Test suite for POST /products
   describe 'POST /products' do
     # valid payload
-    let(:valid_attributes) { { title: 'Learn Elm', created_by: '1' } }
+    let(:valid_attributes) { { product_id: 1, product_name: 'name 1', product_image: 'string.file', product_description: "description" } }
 
     context 'when the request is valid' do
       before { post '/products', params: valid_attributes }
 
       it 'creates a product' do
-        expect(json['title']).to eq('Learn Elm')
+        expect(json['product_id']).to eq(1)
       end
 
       it 'returns status code 201' do
@@ -68,7 +68,7 @@ RSpec.describe 'Products API', type: :request do
     end
 
     context 'when the request is invalid' do
-      before { post '/products', params: { title: 'Foobar' } }
+      before { post '/products', params: { product_id: 2 } }
 
       it 'returns status code 422' do
         expect(response).to have_http_status(422)
@@ -76,14 +76,14 @@ RSpec.describe 'Products API', type: :request do
 
       it 'returns a validation failure message' do
         expect(response.body)
-          .to match(/Validation failed: Created by can't be blank/)
+          .to match(/Validation failed: Product name can't be blank, Product image can't be blank, Product description can't be blank/)
       end
     end
   end
 
   # Test suite for PUT /products/:id
   describe 'PUT /products/:id' do
-    let(:valid_attributes) { { title: 'Shopping' } }
+    let(:valid_attributes) { { product_id: 2 } }
 
     context 'when the record exists' do
       before { put "/products/#{id}", params: valid_attributes }
