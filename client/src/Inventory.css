@@ -1,0 +1,14 @@
+.product {
+	padding-bottom: 20px; 
+}
+
+.product h2 {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.product .description {}
+
+/*product .button-div {
+	display: inline-block;
+}*/
