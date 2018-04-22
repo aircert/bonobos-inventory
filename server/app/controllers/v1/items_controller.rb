@@ -6,7 +6,7 @@ module V1
 
     # GET /products/:product_id/items
     def index
-      json_response(@product.items)
+      json_response({product: @product, items: @product.items})
     end
 
     # GET /products/:product_id/items/:id
