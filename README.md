@@ -18,7 +18,7 @@ My approach is to use the product_id as `product_key` as the foreign key to corr
 4. The rest of the details are in the commit history
 
 # Accomplishments
-    - Rails 5 API
+    - Rails 5 API (includes CRUD for products and items endpoints)
     - Ingestion script
     - RSPEC for both controllers (items and product)
     - Client Side React Fromework setup
