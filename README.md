@@ -6,7 +6,7 @@
     - `rails db:migrate db:seed` - loads in the two .csv files to database
     - `rails s --port 3000` (listens on port 3000)
 3. React client is in the client folder
-    - `cd client && npm start` (listens on port 3001)
+    - `cd client && npm install start` (listens on port 3001)
 
 
 # Approach
@@ -34,7 +34,7 @@ My approach is to use the product_id as `product_key` as the foreign key to corr
     - Upload .csv via UI
     - Align buttons to bottom of product div
     - Refactor to pull out color into a picker on item; Group items by pant size and waist
-    -
+    - Left comments across code as well
 
 # Known Bugs
 - PROCFILE for forman start
