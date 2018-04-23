@@ -7,6 +7,8 @@
     - `rails s --port 3000` (listens on port 3000)
 3. React client is in the client folder
     - `cd client && npm install && npm start` (listens on port 3001)
+4. Test
+    - `bundle exec rspec` in server folder. Search test is failing.
 
 
 # Approach
