@@ -5,11 +5,15 @@ Make sure you have rails -v Rails 5.1.6 and ruby -v ruby 2.4.1
 1. `git clone https://github.com/aircert/bonobos-inventory.git`
     - Two folders under bonobos-inventory `cd bonobos-inventory`
 2. Rails 5 API is located in server folder 
-    - `cd server && rails db:migrate db:seed` - loads in the two .csv files to database
-    - Start with `rails s --port 3000` (listens on port 3000)
+    - `cd server`
+    - `rails db:migrate db:seed` - loads in the two .csv files to database
+    - `rails s --port 3000` (listens on port 3000)
 3. React client is in the client folder
     - Start with `cd client && npm install start` (listens on port 3001)
     - Make sure to select 'Y' for different port as our rails server is running on port 3000 already
+    - `cd client && npm install && npm start` (listens on port 3001)
+4. Test
+    - `bundle exec rspec` in server folder. Search test is failing.
 
 
 # Approach
@@ -39,6 +43,7 @@ My approach is to use the product_id as `product_key` as the foreign key to corr
     - Refactor to pull out color into a picker on item; Group items by pant size and waist
     - Shell script to install dependencies
     - Docker container prebuilt
+    - Left comments across code as well
 
 # Known Bugs
 - PROCFILE for forman start
