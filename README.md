@@ -6,7 +6,8 @@ Make sure you have rails -v Rails 5.1.6 and ruby -v ruby 2.4.1
     - Two folders under bonobos-inventory `cd bonobos-inventory`
 2. Rails 5 API is located in server folder 
     - `cd server`
-    - `rails db:migrate db:seed` - loads in the two .csv files to database
+    - `bundle install`
+    - `rails db:create db:migrate db:seed` - loads in the two .csv files to database
     - `rails s --port 3000` (listens on port 3000)
 3. React client is in the client folder
     - Start with `cd client && npm install start` (listens on port 3001)
