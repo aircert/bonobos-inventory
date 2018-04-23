@@ -3,6 +3,11 @@ require 'csv'
 
 # Future plan (use upsert strategy; Only create if product names are different prevents duplicates)
 puts "Seeding"
+puts "Dropping records for fresh seed"
+
+Product.destroy_all
+Item.destroy_all
+
 @csv_text = File.read(Rails.root.join('db', 'csv', 'products.csv'))
 
 @csv = CSV.parse(@csv_text, :headers => true).map{|row| row.to_h}

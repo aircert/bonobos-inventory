@@ -82,7 +82,7 @@ export default class Inventory extends Component {
     return (
       //TODO: Move into own file and component
       <option value={item.count}>
-        {item.waist} - {item.length} - {item.style}
+        {item.waist}W - {item.length}L - {item.style}
       </option>
     )
   }
