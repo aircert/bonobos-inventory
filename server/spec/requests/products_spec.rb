@@ -20,7 +20,6 @@ RSpec.describe 'Products API', type: :request do
 
     it 'return products with product_name as washed chimps' do
       get '/products?product_name=washed chimps'
-      byebug
       # Note `json` is a custom helper to parse JSON responses
       expect(product.product_name).to eq(json['products'][0]['product_name'])
     end
