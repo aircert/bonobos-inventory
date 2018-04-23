@@ -10,9 +10,9 @@ Make sure you have rails -v Rails 5.1.6 and ruby -v ruby 2.4.1
     - `rails db:create db:migrate db:seed` - loads in the two .csv files to database
     - `rails s --port 3000` (listens on port 3000)
 3. React client is in the client folder
-    - Start with `cd client && npm install start` (listens on port 3001)
+    - `cd client && npm install`
+    - `npm start` (listens on port 3001)
     - Make sure to select 'Y' for different port as our rails server is running on port 3000 already
-    - `cd client && npm install && npm start` (listens on port 3001)
 4. Test
     - `bundle exec rspec` in server folder. Search test is failing.
 
