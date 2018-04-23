@@ -7091,3 +7091,688 @@ Processing by V1::ProductsController#index as */*
 Completed 200 OK in 3ms (Views: 1.4ms | ActiveRecord: 0.5ms)
 
 
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "products" ("product_key", "product_name", "product_image", "product_description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["product_key", 1], ["product_name", "washed chinos"], ["product_image", "https://bonobos-prod-s3.imgix.net/products/26061/original/PNT_WC_GreyDogs_Slim_hero1.jpg?1476915862=&w=1200&auto=format%2Ccompress&dpr=1&q=75&crop=false&fit=clip&w=900&h=1"], ["product_description", " All-purpose 100% cotton chinos with our signature curved waistband for a better and more natural fit. Available in four fits a full range of colors and original contrast pocket liners."], ["created_at", "2018-04-23 12:09:22.769606"], ["updated_at", "2018-04-23 12:09:22.769606"]]
+  [1m[35m (6.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "products" ("product_key", "product_name", "product_image", "product_description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["product_key", 2], ["product_name", "jetsetter jeans"], ["product_image", "https://bonobos-prod-s3.imgix.net/products/26709/original/hjh9u9m0441y5qv9qlg6qvy4owanulkj.jpg?1477944668=&auto=format%2Ccompress&dpr=1&q=75&crop=false&fit=clip&w=400&h=1"], ["product_description", " Innovative stretch denim for first-class comfort. Designed to be extra soft and resilient they’re the most comfortable jeans you’ve ever worn."], ["created_at", "2018-04-23 12:09:22.778521"], ["updated_at", "2018-04-23 12:09:22.778521"]]
+  [1m[35m (5.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "products" ("product_key", "product_name", "product_image", "product_description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["product_key", 3], ["product_name", "travel jeans"], ["product_image", "https://bonobos-prod-s3.imgix.net/products/971/original/DENIM_TravelJeans_AustinAsphalt_category.jpg?1430943616=&auto=format%2Ccompress&dpr=1&q=75&crop=false&fit=clip&w=400&h=1"], ["product_description", " The comfort of stretch in a full range of colors. If you need a break from chinos or more colorful denim. Travel Jeans are for you."], ["created_at", "2018-04-23 12:09:22.785563"], ["updated_at", "2018-04-23 12:09:22.785563"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "products" ("product_key", "product_name", "product_image", "product_description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["product_key", 4], ["product_name", "fireside flannels"], ["product_image", "https://bonobos-prod-s3.imgix.net/products/25887/original/t92qwcahevxivaob92jkm4x9pbsw2yz7.jpg?1475020923=&auto=format%2Ccompress&dpr=1&q=75&crop=false&fit=clip&w=400&h=1"], ["product_description", "Our signature better-fitting chino with warm toasty flannel on the inside."], ["created_at", "2018-04-23 12:09:22.787482"], ["updated_at", "2018-04-23 12:09:22.787482"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."product_key" = $1 LIMIT $2[0m  [["product_key", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "items" ("waist", "length", "product_id", "style", "product_key", "count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["waist", 28], ["length", 36], ["product_id", 1], ["style", " jet blues"], ["product_key", 1], ["count", 75], ["created_at", "2018-04-23 12:09:22.823318"], ["updated_at", "2018-04-23 12:09:22.823318"]]
+  [1m[35m (5.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."product_key" = $1 LIMIT $2[0m  [["product_key", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "items" ("waist", "length", "product_id", "style", "product_key", "count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["waist", 28], ["length", 36], ["product_id", 1], ["style", " grey dogs"], ["product_key", 1], ["count", 46], ["created_at", "2018-04-23 12:09:22.831914"], ["updated_at", "2018-04-23 12:09:22.831914"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."product_key" = $1 LIMIT $2[0m  [["product_key", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "items" ("waist", "length", "product_id", "style", "product_key", "count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["waist", 28], ["length", 36], ["product_id", 1], ["style", " stone cutters"], ["product_key", 1], ["count", 72], ["created_at", "2018-04-23 12:09:22.836675"], ["updated_at", "2018-04-23 12:09:22.836675"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."product_key" = $1 LIMIT $2[0m  [["product_key", 1], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "items" ("waist", "length", "product_id", "style", "product_key", "count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["waist", 28], ["length", 36], ["product_id", 1], ["style", " graham slackers"], ["product_key", 1], ["count", 5], ["created_at", "2018-04-23 12:09:22.841109"], ["updated_at", "2018-04-23 12:09:22.841109"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."product_key" = $1 LIMIT $2[0m  [["product_key", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "items" ("waist", "length", "product_id", "style", "product_key", "count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["waist", 28], ["length", 36], ["product_id", 1], ["style", " blackjacks"], ["product_key", 1], ["count", 5], ["created_at", "2018-04-23 12:09:22.843997"], ["updated_at", "2018-04-23 12:09:22.843997"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."product_key" = $1 LIMIT $2[0m  [["product_key", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "items" ("waist", "length", "product_id", "style", "product_key", "count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["waist", 28], ["length", 36], ["product_id", 1], ["style", " jetstrams"], ["product_key", 1], ["count", 46], ["created_at", "2018-04-23 12:09:22.846556"], ["updated_at", "2018-04-23 12:09:22.846556"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."product_key" = $1 LIMIT $2[0m  [["product_key", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "items" ("waist", "length", "product_id", "style", "product_key", "count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["waist", 28], ["length", 36], ["product_id", 1], ["style", " blue"], ["product_key", 1], ["count", 68], ["created_at", "2018-04-23 12:09:22.849144"], ["updated_at", "2018-04-23 12:09:22.849144"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."product_key" = $1 LIMIT $2[0m  [["product_key", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "items" ("waist", "length", "product_id", "style", "product_key", "count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["waist", 28], ["length", 38], ["product_id", 1], ["style", " jet blues"], ["product_key", 1], ["count", 80], ["created_at", "2018-04-23 12:09:22.854246"], ["updated_at", "2018-04-23 12:09:22.854246"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."product_key" = $1 LIMIT $2[0m  [["product_key", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "items" ("waist", "length", "product_id", "style", "product_key", "count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["waist", 28], ["length", 38], ["product_id", 1], ["style", " grey dogs"], ["product_key", 1], ["count", 69], ["created_at", "2018-04-23 12:09:22.857202"], ["updated_at", "2018-04-23 12:09:22.857202"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."product_key" = $1 LIMIT $2[0m  [["product_key", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "items" ("waist", "length", "product_id", "style", "product_key", "count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["waist", 28], ["length", 38], ["product_id", 1], ["style", " stone cutters"], ["product_key", 1], ["count", 39], ["created_at", "2018-04-23 12:09:22.859737"], ["updated_at", "2018-04-23 12:09:22.859737"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."product_key" = $1 LIMIT $2[0m  [["product_key", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "items" ("waist", "length", "product_id", "style", "product_key", "count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["waist", 28], ["length", 38], ["product_id", 1], ["style", " graham slackers"], ["product_key", 1], ["count", 83], ["created_at", "2018-04-23 12:09:22.862169"], ["updated_at", "2018-04-23 12:09:22.862169"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."product_key" = $1 LIMIT $2[0m  [["product_key", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "items" ("waist", "length", "product_id", "style", "product_key", "count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["waist", 28], ["length", 38], ["product_id", 1], ["style", " blackjacks"], ["product_key", 1], ["count", 23], ["created_at", "2018-04-23 12:09:22.864986"], ["updated_at", "2018-04-23 12:09:22.864986"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."product_key" = $1 LIMIT $2[0m  [["product_key", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "items" ("waist", "length", "product_id", "style", "product_key", "count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["waist", 28], ["length", 38], ["product_id", 1], ["style", " jetstrams"], ["product_key", 1], ["count", 41], ["created_at", "2018-04-23 12:09:22.869889"], ["updated_at", "2018-04-23 12:09:22.869889"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."product_key" = $1 LIMIT $2[0m  [["product_key", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "items" ("waist", "length", "product_id", "style", "product_key", "count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["waist", 28], ["length", 38], ["product_id", 1], ["style", " blue"], ["product_key", 1], ["count", 38], ["created_at", "2018-04-23 12:09:22.873898"], ["updated_at", "2018-04-23 12:09:22.873898"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."product_key" = $1 LIMIT $2[0m  [["product_key", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "items" ("waist", "length", "product_id", "style", "product_key", "count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["waist", 32], ["length", 36], ["product_id", 1], ["style", " jet blues"], ["product_key", 1], ["count", 72], ["created_at", "2018-04-23 12:09:22.877184"], ["updated_at", "2018-04-23 12:09:22.877184"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."product_key" = $1 LIMIT $2[0m  [["product_key", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "items" ("waist", "length", "product_id", "style", "product_key", "count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["waist", 32], ["length", 36], ["product_id", 1], ["style", " grey dogs"], ["product_key", 1], ["count", 51], ["created_at", "2018-04-23 12:09:22.880088"], ["updated_at", "2018-04-23 12:09:22.880088"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."product_key" = $1 LIMIT $2[0m  [["product_key", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "items" ("waist", "length", "product_id", "style", "product_key", "count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["waist", 32], ["length", 36], ["product_id", 1], ["style", " stone cutters"], ["product_key", 1], ["count", 50], ["created_at", "2018-04-23 12:09:22.883103"], ["updated_at", "2018-04-23 12:09:22.883103"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (5.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."product_key" = $1 LIMIT $2[0m  [["product_key", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "items" ("waist", "length", "product_id", "style", "product_key", "count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["waist", 32], ["length", 36], ["product_id", 1], ["style", " graham slackers"], ["product_key", 1], ["count", 92], ["created_at", "2018-04-23 12:09:22.891674"], ["updated_at", "2018-04-23 12:09:22.891674"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."product_key" = $1 LIMIT $2[0m  [["product_key", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "items" ("waist", "length", "product_id", "style", "product_key", "count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["waist", 32], ["length", 36], ["product_id", 1], ["style", " blackjacks"], ["product_key", 1], ["count", 55], ["created_at", "2018-04-23 12:09:22.894970"], ["updated_at", "2018-04-23 12:09:22.894970"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."product_key" = $1 LIMIT $2[0m  [["product_key", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "items" ("waist", "length", "product_id", "style", "product_key", "count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["waist", 32], ["length", 36], ["product_id", 1], ["style", " jetstrams"], ["product_key", 1], ["count", 99], ["created_at", "2018-04-23 12:09:22.898227"], ["updated_at", "2018-04-23 12:09:22.898227"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."product_key" = $1 LIMIT $2[0m  [["product_key", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "items" ("waist", "length", "product_id", "style", "product_key", "count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["waist", 32], ["length", 36], ["product_id", 1], ["style", " blue"], ["product_key", 1], ["count", 1], ["created_at", "2018-04-23 12:09:22.901688"], ["updated_at", "2018-04-23 12:09:22.901688"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."product_key" = $1 LIMIT $2[0m  [["product_key", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "items" ("waist", "length", "product_id", "style", "product_key", "count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["waist", 32], ["length", 38], ["product_id", 1], ["style", " jet blues"], ["product_key", 1], ["count", 5], ["created_at", "2018-04-23 12:09:22.905023"], ["updated_at", "2018-04-23 12:09:22.905023"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."product_key" = $1 LIMIT $2[0m  [["product_key", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "items" ("waist", "length", "product_id", "style", "product_key", "count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["waist", 32], ["length", 38], ["product_id", 1], ["style", " grey dogs"], ["product_key", 1], ["count", 87], ["created_at", "2018-04-23 12:09:22.908688"], ["updated_at", "2018-04-23 12:09:22.908688"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."product_key" = $1 LIMIT $2[0m  [["product_key", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "items" ("waist", "length", "product_id", "style", "product_key", "count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["waist", 32], ["length", 38], ["product_id", 1], ["style", " stone cutters"], ["product_key", 1], ["count", 13], ["created_at", "2018-04-23 12:09:22.911813"], ["updated_at", "2018-04-23 12:09:22.911813"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."product_key" = $1 LIMIT $2[0m  [["product_key", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "items" ("waist", "length", "product_id", "style", "product_key", "count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["waist", 32], ["length", 38], ["product_id", 1], ["style", " graham slackers"], ["product_key", 1], ["count", 90], ["created_at", "2018-04-23 12:09:22.914640"], ["updated_at", "2018-04-23 12:09:22.914640"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."product_key" = $1 LIMIT $2[0m  [["product_key", 1], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "items" ("waist", "length", "product_id", "style", "product_key", "count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["waist", 32], ["length", 38], ["product_id", 1], ["style", " blackjacks"], ["product_key", 1], ["count", 18], ["created_at", "2018-04-23 12:09:22.919840"], ["updated_at", "2018-04-23 12:09:22.919840"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."product_key" = $1 LIMIT $2[0m  [["product_key", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "items" ("waist", "length", "product_id", "style", "product_key", "count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["waist", 32], ["length", 38], ["product_id", 1], ["style", " jetstrams"], ["product_key", 1], ["count", 6], ["created_at", "2018-04-23 12:09:22.924587"], ["updated_at", "2018-04-23 12:09:22.924587"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."product_key" = $1 LIMIT $2[0m  [["product_key", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "items" ("waist", "length", "product_id", "style", "product_key", "count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["waist", 32], ["length", 38], ["product_id", 1], ["style", " blue"], ["product_key", 1], ["count", 75], ["created_at", "2018-04-23 12:09:22.929134"], ["updated_at", "2018-04-23 12:09:22.929134"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."product_key" = $1 LIMIT $2[0m  [["product_key", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "items" ("waist", "length", "product_id", "style", "product_key", "count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["waist", 34], ["length", 36], ["product_id", 1], ["style", " jet blues"], ["product_key", 1], ["count", 9], ["created_at", "2018-04-23 12:09:22.933450"], ["updated_at", "2018-04-23 12:09:22.933450"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."product_key" = $1 LIMIT $2[0m  [["product_key", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "items" ("waist", "length", "product_id", "style", "product_key", "count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["waist", 34], ["length", 36], ["product_id", 1], ["style", " grey dogs"], ["product_key", 1], ["count", 50], ["created_at", "2018-04-23 12:09:22.936416"], ["updated_at", "2018-04-23 12:09:22.936416"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."product_key" = $1 LIMIT $2[0m  [["product_key", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "items" ("waist", "length", "product_id", "style", "product_key", "count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["waist", 34], ["length", 36], ["product_id", 1], ["style", " stone cutters"], ["product_key", 1], ["count", 60], ["created_at", "2018-04-23 12:09:22.939675"], ["updated_at", "2018-04-23 12:09:22.939675"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."product_key" = $1 LIMIT $2[0m  [["product_key", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "items" ("waist", "length", "product_id", "style", "product_key", "count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["waist", 34], ["length", 36], ["product_id", 1], ["style", " graham slackers"], ["product_key", 1], ["count", 9], ["created_at", "2018-04-23 12:09:22.942744"], ["updated_at", "2018-04-23 12:09:22.942744"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."product_key" = $1 LIMIT $2[0m  [["product_key", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "items" ("waist", "length", "product_id", "style", "product_key", "count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["waist", 34], ["length", 36], ["product_id", 1], ["style", " blackjacks"], ["product_key", 1], ["count", 34], ["created_at", "2018-04-23 12:09:22.951620"], ["updated_at", "2018-04-23 12:09:22.951620"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."product_key" = $1 LIMIT $2[0m  [["product_key", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "items" ("waist", "length", "product_id", "style", "product_key", "count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["waist", 34], ["length", 36], ["product_id", 1], ["style", " jetstrams"], ["product_key", 1], ["count", 63], ["created_at", "2018-04-23 12:09:22.955949"], ["updated_at", "2018-04-23 12:09:22.955949"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."product_key" = $1 LIMIT $2[0m  [["product_key", 1], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "items" ("waist", "length", "product_id", "style", "product_key", "count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["waist", 34], ["length", 36], ["product_id", 1], ["style", " blue"], ["product_key", 1], ["count", 99], ["created_at", "2018-04-23 12:09:22.959863"], ["updated_at", "2018-04-23 12:09:22.959863"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."product_key" = $1 LIMIT $2[0m  [["product_key", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "items" ("waist", "length", "product_id", "style", "product_key", "count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["waist", 34], ["length", 38], ["product_id", 1], ["style", " jet blues"], ["product_key", 1], ["count", 76], ["created_at", "2018-04-23 12:09:22.963227"], ["updated_at", "2018-04-23 12:09:22.963227"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."product_key" = $1 LIMIT $2[0m  [["product_key", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "items" ("waist", "length", "product_id", "style", "product_key", "count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["waist", 34], ["length", 38], ["product_id", 1], ["style", " grey dogs"], ["product_key", 1], ["count", 29], ["created_at", "2018-04-23 12:09:22.967569"], ["updated_at", "2018-04-23 12:09:22.967569"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."product_key" = $1 LIMIT $2[0m  [["product_key", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "items" ("waist", "length", "product_id", "style", "product_key", "count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["waist", 34], ["length", 38], ["product_id", 1], ["style", " stone cutters"], ["product_key", 1], ["count", 47], ["created_at", "2018-04-23 12:09:22.972807"], ["updated_at", "2018-04-23 12:09:22.972807"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."product_key" = $1 LIMIT $2[0m  [["product_key", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "items" ("waist", "length", "product_id", "style", "product_key", "count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["waist", 34], ["length", 38], ["product_id", 1], ["style", " graham slackers"], ["product_key", 1], ["count", 93], ["created_at", "2018-04-23 12:09:22.976496"], ["updated_at", "2018-04-23 12:09:22.976496"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."product_key" = $1 LIMIT $2[0m  [["product_key", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "items" ("waist", "length", "product_id", "style", "product_key", "count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["waist", 34], ["length", 38], ["product_id", 1], ["style", " blackjacks"], ["product_key", 1], ["count", 69], ["created_at", "2018-04-23 12:09:22.980039"], ["updated_at", "2018-04-23 12:09:22.980039"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."product_key" = $1 LIMIT $2[0m  [["product_key", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "items" ("waist", "length", "product_id", "style", "product_key", "count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["waist", 34], ["length", 38], ["product_id", 1], ["style", " jetstrams"], ["product_key", 1], ["count", 75], ["created_at", "2018-04-23 12:09:22.983457"], ["updated_at", "2018-04-23 12:09:22.983457"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."product_key" = $1 LIMIT $2[0m  [["product_key", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "items" ("waist", "length", "product_id", "style", "product_key", "count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["waist", 34], ["length", 38], ["product_id", 1], ["style", " blue"], ["product_key", 1], ["count", 19], ["created_at", "2018-04-23 12:09:22.989316"], ["updated_at", "2018-04-23 12:09:22.989316"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."product_key" = $1 LIMIT $2[0m  [["product_key", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "items" ("waist", "length", "product_id", "style", "product_key", "count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["waist", 34], ["length", 30], ["product_id", 2], ["style", " jet blues"], ["product_key", 2], ["count", 73], ["created_at", "2018-04-23 12:09:22.993770"], ["updated_at", "2018-04-23 12:09:22.993770"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."product_key" = $1 LIMIT $2[0m  [["product_key", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "items" ("waist", "length", "product_id", "style", "product_key", "count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["waist", 34], ["length", 30], ["product_id", 2], ["style", " grey dogs"], ["product_key", 2], ["count", 23], ["created_at", "2018-04-23 12:09:22.997016"], ["updated_at", "2018-04-23 12:09:22.997016"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."product_key" = $1 LIMIT $2[0m  [["product_key", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "items" ("waist", "length", "product_id", "style", "product_key", "count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["waist", 34], ["length", 30], ["product_id", 2], ["style", " stone cutters"], ["product_key", 2], ["count", 77], ["created_at", "2018-04-23 12:09:23.005265"], ["updated_at", "2018-04-23 12:09:23.005265"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."product_key" = $1 LIMIT $2[0m  [["product_key", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "items" ("waist", "length", "product_id", "style", "product_key", "count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["waist", 34], ["length", 30], ["product_id", 2], ["style", " graham slackers"], ["product_key", 2], ["count", 74], ["created_at", "2018-04-23 12:09:23.010135"], ["updated_at", "2018-04-23 12:09:23.010135"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."product_key" = $1 LIMIT $2[0m  [["product_key", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "items" ("waist", "length", "product_id", "style", "product_key", "count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["waist", 34], ["length", 30], ["product_id", 2], ["style", " blackjacks"], ["product_key", 2], ["count", 14], ["created_at", "2018-04-23 12:09:23.013444"], ["updated_at", "2018-04-23 12:09:23.013444"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."product_key" = $1 LIMIT $2[0m  [["product_key", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "items" ("waist", "length", "product_id", "style", "product_key", "count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["waist", 34], ["length", 30], ["product_id", 2], ["style", " jetstrams"], ["product_key", 2], ["count", 36], ["created_at", "2018-04-23 12:09:23.016759"], ["updated_at", "2018-04-23 12:09:23.016759"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."product_key" = $1 LIMIT $2[0m  [["product_key", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "items" ("waist", "length", "product_id", "style", "product_key", "count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["waist", 34], ["length", 30], ["product_id", 2], ["style", " blue"], ["product_key", 2], ["count", 99], ["created_at", "2018-04-23 12:09:23.020310"], ["updated_at", "2018-04-23 12:09:23.020310"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."product_key" = $1 LIMIT $2[0m  [["product_key", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "items" ("waist", "length", "product_id", "style", "product_key", "count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["waist", 34], ["length", 32], ["product_id", 2], ["style", " jet blues"], ["product_key", 2], ["count", 63], ["created_at", "2018-04-23 12:09:23.024387"], ["updated_at", "2018-04-23 12:09:23.024387"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."product_key" = $1 LIMIT $2[0m  [["product_key", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "items" ("waist", "length", "product_id", "style", "product_key", "count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["waist", 34], ["length", 32], ["product_id", 2], ["style", " grey dogs"], ["product_key", 2], ["count", 32], ["created_at", "2018-04-23 12:09:23.027695"], ["updated_at", "2018-04-23 12:09:23.027695"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."product_key" = $1 LIMIT $2[0m  [["product_key", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "items" ("waist", "length", "product_id", "style", "product_key", "count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["waist", 34], ["length", 32], ["product_id", 2], ["style", " stone cutters"], ["product_key", 2], ["count", 65], ["created_at", "2018-04-23 12:09:23.031519"], ["updated_at", "2018-04-23 12:09:23.031519"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."product_key" = $1 LIMIT $2[0m  [["product_key", 2], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "items" ("waist", "length", "product_id", "style", "product_key", "count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["waist", 34], ["length", 32], ["product_id", 2], ["style", " graham slackers"], ["product_key", 2], ["count", 26], ["created_at", "2018-04-23 12:09:23.037423"], ["updated_at", "2018-04-23 12:09:23.037423"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."product_key" = $1 LIMIT $2[0m  [["product_key", 2], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "items" ("waist", "length", "product_id", "style", "product_key", "count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["waist", 34], ["length", 32], ["product_id", 2], ["style", " blackjacks"], ["product_key", 2], ["count", 54], ["created_at", "2018-04-23 12:09:23.042596"], ["updated_at", "2018-04-23 12:09:23.042596"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."product_key" = $1 LIMIT $2[0m  [["product_key", 2], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "items" ("waist", "length", "product_id", "style", "product_key", "count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["waist", 34], ["length", 32], ["product_id", 2], ["style", " jetstrams"], ["product_key", 2], ["count", 64], ["created_at", "2018-04-23 12:09:23.047793"], ["updated_at", "2018-04-23 12:09:23.047793"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."product_key" = $1 LIMIT $2[0m  [["product_key", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "items" ("waist", "length", "product_id", "style", "product_key", "count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["waist", 34], ["length", 32], ["product_id", 2], ["style", " blue"], ["product_key", 2], ["count", 43], ["created_at", "2018-04-23 12:09:23.052025"], ["updated_at", "2018-04-23 12:09:23.052025"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."product_key" = $1 LIMIT $2[0m  [["product_key", 2], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "items" ("waist", "length", "product_id", "style", "product_key", "count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["waist", 32], ["length", 30], ["product_id", 2], ["style", " jet blues"], ["product_key", 2], ["count", 34], ["created_at", "2018-04-23 12:09:23.055521"], ["updated_at", "2018-04-23 12:09:23.055521"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."product_key" = $1 LIMIT $2[0m  [["product_key", 2], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "items" ("waist", "length", "product_id", "style", "product_key", "count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["waist", 32], ["length", 30], ["product_id", 2], ["style", " grey dogs"], ["product_key", 2], ["count", 59], ["created_at", "2018-04-23 12:09:23.064464"], ["updated_at", "2018-04-23 12:09:23.064464"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."product_key" = $1 LIMIT $2[0m  [["product_key", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "items" ("waist", "length", "product_id", "style", "product_key", "count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["waist", 32], ["length", 30], ["product_id", 2], ["style", " stone cutters"], ["product_key", 2], ["count", 34], ["created_at", "2018-04-23 12:09:23.068247"], ["updated_at", "2018-04-23 12:09:23.068247"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."product_key" = $1 LIMIT $2[0m  [["product_key", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "items" ("waist", "length", "product_id", "style", "product_key", "count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["waist", 32], ["length", 30], ["product_id", 2], ["style", " graham slackers"], ["product_key", 2], ["count", 10], ["created_at", "2018-04-23 12:09:23.071841"], ["updated_at", "2018-04-23 12:09:23.071841"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."product_key" = $1 LIMIT $2[0m  [["product_key", 2], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "items" ("waist", "length", "product_id", "style", "product_key", "count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["waist", 32], ["length", 30], ["product_id", 2], ["style", " blackjacks"], ["product_key", 2], ["count", 65], ["created_at", "2018-04-23 12:09:23.075288"], ["updated_at", "2018-04-23 12:09:23.075288"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."product_key" = $1 LIMIT $2[0m  [["product_key", 2], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "items" ("waist", "length", "product_id", "style", "product_key", "count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["waist", 32], ["length", 30], ["product_id", 2], ["style", " jetstrams"], ["product_key", 2], ["count", 100], ["created_at", "2018-04-23 12:09:23.078582"], ["updated_at", "2018-04-23 12:09:23.078582"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."product_key" = $1 LIMIT $2[0m  [["product_key", 2], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "items" ("waist", "length", "product_id", "style", "product_key", "count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["waist", 32], ["length", 30], ["product_id", 2], ["style", " blue"], ["product_key", 2], ["count", 84], ["created_at", "2018-04-23 12:09:23.083077"], ["updated_at", "2018-04-23 12:09:23.083077"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."product_key" = $1 LIMIT $2[0m  [["product_key", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "items" ("waist", "length", "product_id", "style", "product_key", "count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["waist", 32], ["length", 32], ["product_id", 2], ["style", " jet blues"], ["product_key", 2], ["count", 88], ["created_at", "2018-04-23 12:09:23.089134"], ["updated_at", "2018-04-23 12:09:23.089134"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."product_key" = $1 LIMIT $2[0m  [["product_key", 2], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "items" ("waist", "length", "product_id", "style", "product_key", "count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["waist", 32], ["length", 32], ["product_id", 2], ["style", " grey dogs"], ["product_key", 2], ["count", 58], ["created_at", "2018-04-23 12:09:23.093022"], ["updated_at", "2018-04-23 12:09:23.093022"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."product_key" = $1 LIMIT $2[0m  [["product_key", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "items" ("waist", "length", "product_id", "style", "product_key", "count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["waist", 32], ["length", 32], ["product_id", 2], ["style", " stone cutters"], ["product_key", 2], ["count", 45], ["created_at", "2018-04-23 12:09:23.096138"], ["updated_at", "2018-04-23 12:09:23.096138"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."product_key" = $1 LIMIT $2[0m  [["product_key", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "items" ("waist", "length", "product_id", "style", "product_key", "count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["waist", 32], ["length", 32], ["product_id", 2], ["style", " graham slackers"], ["product_key", 2], ["count", 36], ["created_at", "2018-04-23 12:09:23.098943"], ["updated_at", "2018-04-23 12:09:23.098943"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."product_key" = $1 LIMIT $2[0m  [["product_key", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "items" ("waist", "length", "product_id", "style", "product_key", "count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["waist", 32], ["length", 32], ["product_id", 2], ["style", " blackjacks"], ["product_key", 2], ["count", 74], ["created_at", "2018-04-23 12:09:23.104322"], ["updated_at", "2018-04-23 12:09:23.104322"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."product_key" = $1 LIMIT $2[0m  [["product_key", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "items" ("waist", "length", "product_id", "style", "product_key", "count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["waist", 32], ["length", 32], ["product_id", 2], ["style", " jetstrams"], ["product_key", 2], ["count", 16], ["created_at", "2018-04-23 12:09:23.108987"], ["updated_at", "2018-04-23 12:09:23.108987"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."product_key" = $1 LIMIT $2[0m  [["product_key", 2], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "items" ("waist", "length", "product_id", "style", "product_key", "count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["waist", 32], ["length", 32], ["product_id", 2], ["style", " blue"], ["product_key", 2], ["count", 40], ["created_at", "2018-04-23 12:09:23.112522"], ["updated_at", "2018-04-23 12:09:23.112522"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."product_key" = $1 LIMIT $2[0m  [["product_key", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "items" ("waist", "length", "product_id", "style", "product_key", "count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["waist", 28], ["length", 30], ["product_id", 2], ["style", " jet blues"], ["product_key", 2], ["count", 44], ["created_at", "2018-04-23 12:09:23.125929"], ["updated_at", "2018-04-23 12:09:23.125929"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."product_key" = $1 LIMIT $2[0m  [["product_key", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "items" ("waist", "length", "product_id", "style", "product_key", "count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["waist", 28], ["length", 30], ["product_id", 2], ["style", " grey dogs"], ["product_key", 2], ["count", 18], ["created_at", "2018-04-23 12:09:23.129235"], ["updated_at", "2018-04-23 12:09:23.129235"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."product_key" = $1 LIMIT $2[0m  [["product_key", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "items" ("waist", "length", "product_id", "style", "product_key", "count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["waist", 28], ["length", 30], ["product_id", 2], ["style", " stone cutters"], ["product_key", 2], ["count", 56], ["created_at", "2018-04-23 12:09:23.132706"], ["updated_at", "2018-04-23 12:09:23.132706"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."product_key" = $1 LIMIT $2[0m  [["product_key", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "items" ("waist", "length", "product_id", "style", "product_key", "count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["waist", 28], ["length", 30], ["product_id", 2], ["style", " graham slackers"], ["product_key", 2], ["count", 15], ["created_at", "2018-04-23 12:09:23.136205"], ["updated_at", "2018-04-23 12:09:23.136205"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."product_key" = $1 LIMIT $2[0m  [["product_key", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "items" ("waist", "length", "product_id", "style", "product_key", "count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["waist", 28], ["length", 30], ["product_id", 2], ["style", " blackjacks"], ["product_key", 2], ["count", 15], ["created_at", "2018-04-23 12:09:23.139107"], ["updated_at", "2018-04-23 12:09:23.139107"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."product_key" = $1 LIMIT $2[0m  [["product_key", 2], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "items" ("waist", "length", "product_id", "style", "product_key", "count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["waist", 28], ["length", 30], ["product_id", 2], ["style", " jetstrams"], ["product_key", 2], ["count", 65], ["created_at", "2018-04-23 12:09:23.142119"], ["updated_at", "2018-04-23 12:09:23.142119"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."product_key" = $1 LIMIT $2[0m  [["product_key", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "items" ("waist", "length", "product_id", "style", "product_key", "count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["waist", 28], ["length", 30], ["product_id", 2], ["style", " blue"], ["product_key", 2], ["count", 76], ["created_at", "2018-04-23 12:09:23.144714"], ["updated_at", "2018-04-23 12:09:23.144714"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."product_key" = $1 LIMIT $2[0m  [["product_key", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "items" ("waist", "length", "product_id", "style", "product_key", "count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["waist", 28], ["length", 32], ["product_id", 2], ["style", " jet blues"], ["product_key", 2], ["count", 91], ["created_at", "2018-04-23 12:09:23.147459"], ["updated_at", "2018-04-23 12:09:23.147459"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."product_key" = $1 LIMIT $2[0m  [["product_key", 2], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "items" ("waist", "length", "product_id", "style", "product_key", "count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["waist", 28], ["length", 32], ["product_id", 2], ["style", " grey dogs"], ["product_key", 2], ["count", 67], ["created_at", "2018-04-23 12:09:23.152475"], ["updated_at", "2018-04-23 12:09:23.152475"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."product_key" = $1 LIMIT $2[0m  [["product_key", 2], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "items" ("waist", "length", "product_id", "style", "product_key", "count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["waist", 28], ["length", 32], ["product_id", 2], ["style", " stone cutters"], ["product_key", 2], ["count", 17], ["created_at", "2018-04-23 12:09:23.157781"], ["updated_at", "2018-04-23 12:09:23.157781"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."product_key" = $1 LIMIT $2[0m  [["product_key", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "items" ("waist", "length", "product_id", "style", "product_key", "count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["waist", 28], ["length", 32], ["product_id", 2], ["style", " graham slackers"], ["product_key", 2], ["count", 52], ["created_at", "2018-04-23 12:09:23.162525"], ["updated_at", "2018-04-23 12:09:23.162525"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."product_key" = $1 LIMIT $2[0m  [["product_key", 2], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "items" ("waist", "length", "product_id", "style", "product_key", "count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["waist", 28], ["length", 32], ["product_id", 2], ["style", " blackjacks"], ["product_key", 2], ["count", 3], ["created_at", "2018-04-23 12:09:23.166664"], ["updated_at", "2018-04-23 12:09:23.166664"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."product_key" = $1 LIMIT $2[0m  [["product_key", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "items" ("waist", "length", "product_id", "style", "product_key", "count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["waist", 28], ["length", 32], ["product_id", 2], ["style", " jetstrams"], ["product_key", 2], ["count", 18], ["created_at", "2018-04-23 12:09:23.169857"], ["updated_at", "2018-04-23 12:09:23.169857"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."product_key" = $1 LIMIT $2[0m  [["product_key", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "items" ("waist", "length", "product_id", "style", "product_key", "count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["waist", 28], ["length", 32], ["product_id", 2], ["style", " blue"], ["product_key", 2], ["count", 4], ["created_at", "2018-04-23 12:09:23.172848"], ["updated_at", "2018-04-23 12:09:23.172848"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."product_key" = $1 LIMIT $2[0m  [["product_key", 3], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "items" ("waist", "length", "product_id", "style", "product_key", "count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["waist", 30], ["length", 32], ["product_id", 3], ["style", " jet blues"], ["product_key", 3], ["count", 57], ["created_at", "2018-04-23 12:09:23.175660"], ["updated_at", "2018-04-23 12:09:23.175660"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."product_key" = $1 LIMIT $2[0m  [["product_key", 3], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "items" ("waist", "length", "product_id", "style", "product_key", "count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["waist", 30], ["length", 32], ["product_id", 3], ["style", " grey dogs"], ["product_key", 3], ["count", 69], ["created_at", "2018-04-23 12:09:23.184040"], ["updated_at", "2018-04-23 12:09:23.184040"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."product_key" = $1 LIMIT $2[0m  [["product_key", 3], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "items" ("waist", "length", "product_id", "style", "product_key", "count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["waist", 30], ["length", 32], ["product_id", 3], ["style", " stone cutters"], ["product_key", 3], ["count", 15], ["created_at", "2018-04-23 12:09:23.186863"], ["updated_at", "2018-04-23 12:09:23.186863"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."product_key" = $1 LIMIT $2[0m  [["product_key", 3], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "items" ("waist", "length", "product_id", "style", "product_key", "count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["waist", 30], ["length", 32], ["product_id", 3], ["style", " graham slackers"], ["product_key", 3], ["count", 50], ["created_at", "2018-04-23 12:09:23.190306"], ["updated_at", "2018-04-23 12:09:23.190306"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."product_key" = $1 LIMIT $2[0m  [["product_key", 3], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "items" ("waist", "length", "product_id", "style", "product_key", "count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["waist", 30], ["length", 32], ["product_id", 3], ["style", " blackjacks"], ["product_key", 3], ["count", 6], ["created_at", "2018-04-23 12:09:23.193239"], ["updated_at", "2018-04-23 12:09:23.193239"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."product_key" = $1 LIMIT $2[0m  [["product_key", 3], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "items" ("waist", "length", "product_id", "style", "product_key", "count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["waist", 30], ["length", 32], ["product_id", 3], ["style", " jetstrams"], ["product_key", 3], ["count", 33], ["created_at", "2018-04-23 12:09:23.196200"], ["updated_at", "2018-04-23 12:09:23.196200"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."product_key" = $1 LIMIT $2[0m  [["product_key", 3], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "items" ("waist", "length", "product_id", "style", "product_key", "count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["waist", 30], ["length", 32], ["product_id", 3], ["style", " blue"], ["product_key", 3], ["count", 65], ["created_at", "2018-04-23 12:09:23.199995"], ["updated_at", "2018-04-23 12:09:23.199995"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."product_key" = $1 LIMIT $2[0m  [["product_key", 3], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "items" ("waist", "length", "product_id", "style", "product_key", "count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["waist", 30], ["length", 36], ["product_id", 3], ["style", " jet blues"], ["product_key", 3], ["count", 19], ["created_at", "2018-04-23 12:09:23.205035"], ["updated_at", "2018-04-23 12:09:23.205035"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."product_key" = $1 LIMIT $2[0m  [["product_key", 3], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "items" ("waist", "length", "product_id", "style", "product_key", "count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["waist", 30], ["length", 36], ["product_id", 3], ["style", " grey dogs"], ["product_key", 3], ["count", 57], ["created_at", "2018-04-23 12:09:23.208561"], ["updated_at", "2018-04-23 12:09:23.208561"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."product_key" = $1 LIMIT $2[0m  [["product_key", 3], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "items" ("waist", "length", "product_id", "style", "product_key", "count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["waist", 30], ["length", 36], ["product_id", 3], ["style", " stone cutters"], ["product_key", 3], ["count", 14], ["created_at", "2018-04-23 12:09:23.211581"], ["updated_at", "2018-04-23 12:09:23.211581"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."product_key" = $1 LIMIT $2[0m  [["product_key", 3], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "items" ("waist", "length", "product_id", "style", "product_key", "count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["waist", 30], ["length", 36], ["product_id", 3], ["style", " graham slackers"], ["product_key", 3], ["count", 66], ["created_at", "2018-04-23 12:09:23.214406"], ["updated_at", "2018-04-23 12:09:23.214406"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."product_key" = $1 LIMIT $2[0m  [["product_key", 3], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "items" ("waist", "length", "product_id", "style", "product_key", "count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["waist", 30], ["length", 36], ["product_id", 3], ["style", " blackjacks"], ["product_key", 3], ["count", 100], ["created_at", "2018-04-23 12:09:23.218517"], ["updated_at", "2018-04-23 12:09:23.218517"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."product_key" = $1 LIMIT $2[0m  [["product_key", 3], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "items" ("waist", "length", "product_id", "style", "product_key", "count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["waist", 30], ["length", 36], ["product_id", 3], ["style", " jetstrams"], ["product_key", 3], ["count", 66], ["created_at", "2018-04-23 12:09:23.222562"], ["updated_at", "2018-04-23 12:09:23.222562"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."product_key" = $1 LIMIT $2[0m  [["product_key", 3], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "items" ("waist", "length", "product_id", "style", "product_key", "count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["waist", 30], ["length", 36], ["product_id", 3], ["style", " blue"], ["product_key", 3], ["count", 72], ["created_at", "2018-04-23 12:09:23.225877"], ["updated_at", "2018-04-23 12:09:23.225877"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."product_key" = $1 LIMIT $2[0m  [["product_key", 3], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "items" ("waist", "length", "product_id", "style", "product_key", "count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["waist", 34], ["length", 32], ["product_id", 3], ["style", " jet blues"], ["product_key", 3], ["count", 24], ["created_at", "2018-04-23 12:09:23.228890"], ["updated_at", "2018-04-23 12:09:23.228890"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."product_key" = $1 LIMIT $2[0m  [["product_key", 3], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (5.5ms)[0m  [1m[32mINSERT INTO "items" ("waist", "length", "product_id", "style", "product_key", "count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["waist", 34], ["length", 32], ["product_id", 3], ["style", " grey dogs"], ["product_key", 3], ["count", 95], ["created_at", "2018-04-23 12:09:23.231782"], ["updated_at", "2018-04-23 12:09:23.231782"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."product_key" = $1 LIMIT $2[0m  [["product_key", 3], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "items" ("waist", "length", "product_id", "style", "product_key", "count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["waist", 34], ["length", 32], ["product_id", 3], ["style", " stone cutters"], ["product_key", 3], ["count", 74], ["created_at", "2018-04-23 12:09:23.240687"], ["updated_at", "2018-04-23 12:09:23.240687"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."product_key" = $1 LIMIT $2[0m  [["product_key", 3], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "items" ("waist", "length", "product_id", "style", "product_key", "count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["waist", 34], ["length", 32], ["product_id", 3], ["style", " graham slackers"], ["product_key", 3], ["count", 91], ["created_at", "2018-04-23 12:09:23.243366"], ["updated_at", "2018-04-23 12:09:23.243366"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."product_key" = $1 LIMIT $2[0m  [["product_key", 3], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "items" ("waist", "length", "product_id", "style", "product_key", "count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["waist", 34], ["length", 32], ["product_id", 3], ["style", " blackjacks"], ["product_key", 3], ["count", 4], ["created_at", "2018-04-23 12:09:23.246265"], ["updated_at", "2018-04-23 12:09:23.246265"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."product_key" = $1 LIMIT $2[0m  [["product_key", 3], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "items" ("waist", "length", "product_id", "style", "product_key", "count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["waist", 34], ["length", 32], ["product_id", 3], ["style", " jetstrams"], ["product_key", 3], ["count", 18], ["created_at", "2018-04-23 12:09:23.249140"], ["updated_at", "2018-04-23 12:09:23.249140"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."product_key" = $1 LIMIT $2[0m  [["product_key", 3], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "items" ("waist", "length", "product_id", "style", "product_key", "count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["waist", 34], ["length", 32], ["product_id", 3], ["style", " blue"], ["product_key", 3], ["count", 38], ["created_at", "2018-04-23 12:09:23.251914"], ["updated_at", "2018-04-23 12:09:23.251914"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."product_key" = $1 LIMIT $2[0m  [["product_key", 3], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "items" ("waist", "length", "product_id", "style", "product_key", "count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["waist", 34], ["length", 36], ["product_id", 3], ["style", " jet blues"], ["product_key", 3], ["count", 32], ["created_at", "2018-04-23 12:09:23.254897"], ["updated_at", "2018-04-23 12:09:23.254897"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."product_key" = $1 LIMIT $2[0m  [["product_key", 3], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "items" ("waist", "length", "product_id", "style", "product_key", "count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["waist", 34], ["length", 36], ["product_id", 3], ["style", " grey dogs"], ["product_key", 3], ["count", 66], ["created_at", "2018-04-23 12:09:23.257835"], ["updated_at", "2018-04-23 12:09:23.257835"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."product_key" = $1 LIMIT $2[0m  [["product_key", 3], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "items" ("waist", "length", "product_id", "style", "product_key", "count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["waist", 34], ["length", 36], ["product_id", 3], ["style", " stone cutters"], ["product_key", 3], ["count", 28], ["created_at", "2018-04-23 12:09:23.260605"], ["updated_at", "2018-04-23 12:09:23.260605"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."product_key" = $1 LIMIT $2[0m  [["product_key", 3], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "items" ("waist", "length", "product_id", "style", "product_key", "count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["waist", 34], ["length", 36], ["product_id", 3], ["style", " graham slackers"], ["product_key", 3], ["count", 35], ["created_at", "2018-04-23 12:09:23.263356"], ["updated_at", "2018-04-23 12:09:23.263356"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."product_key" = $1 LIMIT $2[0m  [["product_key", 3], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "items" ("waist", "length", "product_id", "style", "product_key", "count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["waist", 34], ["length", 36], ["product_id", 3], ["style", " blackjacks"], ["product_key", 3], ["count", 44], ["created_at", "2018-04-23 12:09:23.268338"], ["updated_at", "2018-04-23 12:09:23.268338"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."product_key" = $1 LIMIT $2[0m  [["product_key", 3], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "items" ("waist", "length", "product_id", "style", "product_key", "count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["waist", 34], ["length", 36], ["product_id", 3], ["style", " jetstrams"], ["product_key", 3], ["count", 54], ["created_at", "2018-04-23 12:09:23.274750"], ["updated_at", "2018-04-23 12:09:23.274750"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."product_key" = $1 LIMIT $2[0m  [["product_key", 3], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "items" ("waist", "length", "product_id", "style", "product_key", "count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["waist", 34], ["length", 36], ["product_id", 3], ["style", " blue"], ["product_key", 3], ["count", 99], ["created_at", "2018-04-23 12:09:23.279698"], ["updated_at", "2018-04-23 12:09:23.279698"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."product_key" = $1 LIMIT $2[0m  [["product_key", 3], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "items" ("waist", "length", "product_id", "style", "product_key", "count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["waist", 32], ["length", 32], ["product_id", 3], ["style", " jet blues"], ["product_key", 3], ["count", 79], ["created_at", "2018-04-23 12:09:23.283605"], ["updated_at", "2018-04-23 12:09:23.283605"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."product_key" = $1 LIMIT $2[0m  [["product_key", 3], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "items" ("waist", "length", "product_id", "style", "product_key", "count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["waist", 32], ["length", 32], ["product_id", 3], ["style", " grey dogs"], ["product_key", 3], ["count", 10], ["created_at", "2018-04-23 12:09:23.286851"], ["updated_at", "2018-04-23 12:09:23.286851"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."product_key" = $1 LIMIT $2[0m  [["product_key", 3], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "items" ("waist", "length", "product_id", "style", "product_key", "count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["waist", 32], ["length", 32], ["product_id", 3], ["style", " stone cutters"], ["product_key", 3], ["count", 17], ["created_at", "2018-04-23 12:09:23.289968"], ["updated_at", "2018-04-23 12:09:23.289968"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (5.4ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."product_key" = $1 LIMIT $2[0m  [["product_key", 3], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "items" ("waist", "length", "product_id", "style", "product_key", "count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["waist", 32], ["length", 32], ["product_id", 3], ["style", " graham slackers"], ["product_key", 3], ["count", 10], ["created_at", "2018-04-23 12:09:23.298599"], ["updated_at", "2018-04-23 12:09:23.298599"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."product_key" = $1 LIMIT $2[0m  [["product_key", 3], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "items" ("waist", "length", "product_id", "style", "product_key", "count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["waist", 32], ["length", 32], ["product_id", 3], ["style", " blackjacks"], ["product_key", 3], ["count", 79], ["created_at", "2018-04-23 12:09:23.301796"], ["updated_at", "2018-04-23 12:09:23.301796"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."product_key" = $1 LIMIT $2[0m  [["product_key", 3], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "items" ("waist", "length", "product_id", "style", "product_key", "count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["waist", 32], ["length", 32], ["product_id", 3], ["style", " jetstrams"], ["product_key", 3], ["count", 25], ["created_at", "2018-04-23 12:09:23.305083"], ["updated_at", "2018-04-23 12:09:23.305083"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."product_key" = $1 LIMIT $2[0m  [["product_key", 3], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "items" ("waist", "length", "product_id", "style", "product_key", "count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["waist", 32], ["length", 32], ["product_id", 3], ["style", " blue"], ["product_key", 3], ["count", 51], ["created_at", "2018-04-23 12:09:23.308205"], ["updated_at", "2018-04-23 12:09:23.308205"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."product_key" = $1 LIMIT $2[0m  [["product_key", 3], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "items" ("waist", "length", "product_id", "style", "product_key", "count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["waist", 32], ["length", 36], ["product_id", 3], ["style", " jet blues"], ["product_key", 3], ["count", 2], ["created_at", "2018-04-23 12:09:23.311435"], ["updated_at", "2018-04-23 12:09:23.311435"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."product_key" = $1 LIMIT $2[0m  [["product_key", 3], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "items" ("waist", "length", "product_id", "style", "product_key", "count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["waist", 32], ["length", 36], ["product_id", 3], ["style", " grey dogs"], ["product_key", 3], ["count", 61], ["created_at", "2018-04-23 12:09:23.314355"], ["updated_at", "2018-04-23 12:09:23.314355"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."product_key" = $1 LIMIT $2[0m  [["product_key", 3], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "items" ("waist", "length", "product_id", "style", "product_key", "count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["waist", 32], ["length", 36], ["product_id", 3], ["style", " stone cutters"], ["product_key", 3], ["count", 83], ["created_at", "2018-04-23 12:09:23.319622"], ["updated_at", "2018-04-23 12:09:23.319622"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."product_key" = $1 LIMIT $2[0m  [["product_key", 3], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "items" ("waist", "length", "product_id", "style", "product_key", "count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["waist", 32], ["length", 36], ["product_id", 3], ["style", " graham slackers"], ["product_key", 3], ["count", 43], ["created_at", "2018-04-23 12:09:23.324393"], ["updated_at", "2018-04-23 12:09:23.324393"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."product_key" = $1 LIMIT $2[0m  [["product_key", 3], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "items" ("waist", "length", "product_id", "style", "product_key", "count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["waist", 32], ["length", 36], ["product_id", 3], ["style", " blackjacks"], ["product_key", 3], ["count", 28], ["created_at", "2018-04-23 12:09:23.327743"], ["updated_at", "2018-04-23 12:09:23.327743"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."product_key" = $1 LIMIT $2[0m  [["product_key", 3], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "items" ("waist", "length", "product_id", "style", "product_key", "count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["waist", 32], ["length", 36], ["product_id", 3], ["style", " jetstrams"], ["product_key", 3], ["count", 13], ["created_at", "2018-04-23 12:09:23.330455"], ["updated_at", "2018-04-23 12:09:23.330455"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."product_key" = $1 LIMIT $2[0m  [["product_key", 3], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "items" ("waist", "length", "product_id", "style", "product_key", "count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["waist", 32], ["length", 36], ["product_id", 3], ["style", " blue"], ["product_key", 3], ["count", 3], ["created_at", "2018-04-23 12:09:23.334913"], ["updated_at", "2018-04-23 12:09:23.334913"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."product_key" = $1 LIMIT $2[0m  [["product_key", 4], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "items" ("waist", "length", "product_id", "style", "product_key", "count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["waist", 32], ["length", 32], ["product_id", 4], ["style", " jet blues"], ["product_key", 4], ["count", 75], ["created_at", "2018-04-23 12:09:23.339214"], ["updated_at", "2018-04-23 12:09:23.339214"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."product_key" = $1 LIMIT $2[0m  [["product_key", 4], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "items" ("waist", "length", "product_id", "style", "product_key", "count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["waist", 32], ["length", 32], ["product_id", 4], ["style", " grey dogs"], ["product_key", 4], ["count", 40], ["created_at", "2018-04-23 12:09:23.342368"], ["updated_at", "2018-04-23 12:09:23.342368"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."product_key" = $1 LIMIT $2[0m  [["product_key", 4], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "items" ("waist", "length", "product_id", "style", "product_key", "count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["waist", 32], ["length", 32], ["product_id", 4], ["style", " stone cutters"], ["product_key", 4], ["count", 38], ["created_at", "2018-04-23 12:09:23.345312"], ["updated_at", "2018-04-23 12:09:23.345312"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."product_key" = $1 LIMIT $2[0m  [["product_key", 4], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "items" ("waist", "length", "product_id", "style", "product_key", "count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["waist", 32], ["length", 32], ["product_id", 4], ["style", " graham slackers"], ["product_key", 4], ["count", 12], ["created_at", "2018-04-23 12:09:23.348172"], ["updated_at", "2018-04-23 12:09:23.348172"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."product_key" = $1 LIMIT $2[0m  [["product_key", 4], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "items" ("waist", "length", "product_id", "style", "product_key", "count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["waist", 32], ["length", 32], ["product_id", 4], ["style", " blackjacks"], ["product_key", 4], ["count", 32], ["created_at", "2018-04-23 12:09:23.356852"], ["updated_at", "2018-04-23 12:09:23.356852"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."product_key" = $1 LIMIT $2[0m  [["product_key", 4], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "items" ("waist", "length", "product_id", "style", "product_key", "count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["waist", 32], ["length", 32], ["product_id", 4], ["style", " jetstrams"], ["product_key", 4], ["count", 8], ["created_at", "2018-04-23 12:09:23.360080"], ["updated_at", "2018-04-23 12:09:23.360080"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."product_key" = $1 LIMIT $2[0m  [["product_key", 4], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "items" ("waist", "length", "product_id", "style", "product_key", "count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["waist", 32], ["length", 32], ["product_id", 4], ["style", " blue"], ["product_key", 4], ["count", 30], ["created_at", "2018-04-23 12:09:23.364480"], ["updated_at", "2018-04-23 12:09:23.364480"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."product_key" = $1 LIMIT $2[0m  [["product_key", 4], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "items" ("waist", "length", "product_id", "style", "product_key", "count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["waist", 32], ["length", 36], ["product_id", 4], ["style", " jet blues"], ["product_key", 4], ["count", 14], ["created_at", "2018-04-23 12:09:23.367450"], ["updated_at", "2018-04-23 12:09:23.367450"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."product_key" = $1 LIMIT $2[0m  [["product_key", 4], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "items" ("waist", "length", "product_id", "style", "product_key", "count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["waist", 32], ["length", 36], ["product_id", 4], ["style", " grey dogs"], ["product_key", 4], ["count", 29], ["created_at", "2018-04-23 12:09:23.370344"], ["updated_at", "2018-04-23 12:09:23.370344"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."product_key" = $1 LIMIT $2[0m  [["product_key", 4], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "items" ("waist", "length", "product_id", "style", "product_key", "count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["waist", 32], ["length", 36], ["product_id", 4], ["style", " stone cutters"], ["product_key", 4], ["count", 98], ["created_at", "2018-04-23 12:09:23.373711"], ["updated_at", "2018-04-23 12:09:23.373711"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."product_key" = $1 LIMIT $2[0m  [["product_key", 4], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "items" ("waist", "length", "product_id", "style", "product_key", "count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["waist", 32], ["length", 36], ["product_id", 4], ["style", " graham slackers"], ["product_key", 4], ["count", 18], ["created_at", "2018-04-23 12:09:23.376525"], ["updated_at", "2018-04-23 12:09:23.376525"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."product_key" = $1 LIMIT $2[0m  [["product_key", 4], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "items" ("waist", "length", "product_id", "style", "product_key", "count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["waist", 32], ["length", 36], ["product_id", 4], ["style", " blackjacks"], ["product_key", 4], ["count", 85], ["created_at", "2018-04-23 12:09:23.379470"], ["updated_at", "2018-04-23 12:09:23.379470"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."product_key" = $1 LIMIT $2[0m  [["product_key", 4], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "items" ("waist", "length", "product_id", "style", "product_key", "count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["waist", 32], ["length", 36], ["product_id", 4], ["style", " jetstrams"], ["product_key", 4], ["count", 45], ["created_at", "2018-04-23 12:09:23.382804"], ["updated_at", "2018-04-23 12:09:23.382804"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."product_key" = $1 LIMIT $2[0m  [["product_key", 4], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "items" ("waist", "length", "product_id", "style", "product_key", "count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["waist", 32], ["length", 36], ["product_id", 4], ["style", " blue"], ["product_key", 4], ["count", 40], ["created_at", "2018-04-23 12:09:23.387735"], ["updated_at", "2018-04-23 12:09:23.387735"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."product_key" = $1 LIMIT $2[0m  [["product_key", 4], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "items" ("waist", "length", "product_id", "style", "product_key", "count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["waist", 36], ["length", 32], ["product_id", 4], ["style", " jet blues"], ["product_key", 4], ["count", 25], ["created_at", "2018-04-23 12:09:23.393853"], ["updated_at", "2018-04-23 12:09:23.393853"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."product_key" = $1 LIMIT $2[0m  [["product_key", 4], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "items" ("waist", "length", "product_id", "style", "product_key", "count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["waist", 36], ["length", 32], ["product_id", 4], ["style", " grey dogs"], ["product_key", 4], ["count", 37], ["created_at", "2018-04-23 12:09:23.397805"], ["updated_at", "2018-04-23 12:09:23.397805"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."product_key" = $1 LIMIT $2[0m  [["product_key", 4], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "items" ("waist", "length", "product_id", "style", "product_key", "count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["waist", 36], ["length", 32], ["product_id", 4], ["style", " stone cutters"], ["product_key", 4], ["count", 92], ["created_at", "2018-04-23 12:09:23.400841"], ["updated_at", "2018-04-23 12:09:23.400841"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."product_key" = $1 LIMIT $2[0m  [["product_key", 4], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "items" ("waist", "length", "product_id", "style", "product_key", "count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["waist", 36], ["length", 32], ["product_id", 4], ["style", " graham slackers"], ["product_key", 4], ["count", 78], ["created_at", "2018-04-23 12:09:23.403653"], ["updated_at", "2018-04-23 12:09:23.403653"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."product_key" = $1 LIMIT $2[0m  [["product_key", 4], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "items" ("waist", "length", "product_id", "style", "product_key", "count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["waist", 36], ["length", 32], ["product_id", 4], ["style", " blackjacks"], ["product_key", 4], ["count", 59], ["created_at", "2018-04-23 12:09:23.406178"], ["updated_at", "2018-04-23 12:09:23.406178"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (5.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."product_key" = $1 LIMIT $2[0m  [["product_key", 4], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "items" ("waist", "length", "product_id", "style", "product_key", "count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["waist", 36], ["length", 32], ["product_id", 4], ["style", " jetstrams"], ["product_key", 4], ["count", 38], ["created_at", "2018-04-23 12:09:23.414461"], ["updated_at", "2018-04-23 12:09:23.414461"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."product_key" = $1 LIMIT $2[0m  [["product_key", 4], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "items" ("waist", "length", "product_id", "style", "product_key", "count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["waist", 36], ["length", 32], ["product_id", 4], ["style", " blue"], ["product_key", 4], ["count", 13], ["created_at", "2018-04-23 12:09:23.417465"], ["updated_at", "2018-04-23 12:09:23.417465"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."product_key" = $1 LIMIT $2[0m  [["product_key", 4], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "items" ("waist", "length", "product_id", "style", "product_key", "count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["waist", 36], ["length", 36], ["product_id", 4], ["style", " jet blues"], ["product_key", 4], ["count", 17], ["created_at", "2018-04-23 12:09:23.420555"], ["updated_at", "2018-04-23 12:09:23.420555"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."product_key" = $1 LIMIT $2[0m  [["product_key", 4], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "items" ("waist", "length", "product_id", "style", "product_key", "count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["waist", 36], ["length", 36], ["product_id", 4], ["style", " grey dogs"], ["product_key", 4], ["count", 28], ["created_at", "2018-04-23 12:09:23.423629"], ["updated_at", "2018-04-23 12:09:23.423629"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."product_key" = $1 LIMIT $2[0m  [["product_key", 4], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "items" ("waist", "length", "product_id", "style", "product_key", "count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["waist", 36], ["length", 36], ["product_id", 4], ["style", " stone cutters"], ["product_key", 4], ["count", 43], ["created_at", "2018-04-23 12:09:23.426191"], ["updated_at", "2018-04-23 12:09:23.426191"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."product_key" = $1 LIMIT $2[0m  [["product_key", 4], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "items" ("waist", "length", "product_id", "style", "product_key", "count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["waist", 36], ["length", 36], ["product_id", 4], ["style", " graham slackers"], ["product_key", 4], ["count", 21], ["created_at", "2018-04-23 12:09:23.429031"], ["updated_at", "2018-04-23 12:09:23.429031"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."product_key" = $1 LIMIT $2[0m  [["product_key", 4], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "items" ("waist", "length", "product_id", "style", "product_key", "count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["waist", 36], ["length", 36], ["product_id", 4], ["style", " blackjacks"], ["product_key", 4], ["count", 94], ["created_at", "2018-04-23 12:09:23.432560"], ["updated_at", "2018-04-23 12:09:23.432560"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."product_key" = $1 LIMIT $2[0m  [["product_key", 4], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "items" ("waist", "length", "product_id", "style", "product_key", "count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["waist", 36], ["length", 36], ["product_id", 4], ["style", " jetstrams"], ["product_key", 4], ["count", 4], ["created_at", "2018-04-23 12:09:23.437575"], ["updated_at", "2018-04-23 12:09:23.437575"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."product_key" = $1 LIMIT $2[0m  [["product_key", 4], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "items" ("waist", "length", "product_id", "style", "product_key", "count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["waist", 36], ["length", 36], ["product_id", 4], ["style", " blue"], ["product_key", 4], ["count", 35], ["created_at", "2018-04-23 12:09:23.441341"], ["updated_at", "2018-04-23 12:09:23.441341"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."product_key" = $1 LIMIT $2[0m  [["product_key", 4], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "items" ("waist", "length", "product_id", "style", "product_key", "count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["waist", 28], ["length", 32], ["product_id", 4], ["style", " jet blues"], ["product_key", 4], ["count", 1], ["created_at", "2018-04-23 12:09:23.444373"], ["updated_at", "2018-04-23 12:09:23.444373"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."product_key" = $1 LIMIT $2[0m  [["product_key", 4], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "items" ("waist", "length", "product_id", "style", "product_key", "count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["waist", 28], ["length", 32], ["product_id", 4], ["style", " grey dogs"], ["product_key", 4], ["count", 36], ["created_at", "2018-04-23 12:09:23.447167"], ["updated_at", "2018-04-23 12:09:23.447167"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."product_key" = $1 LIMIT $2[0m  [["product_key", 4], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "items" ("waist", "length", "product_id", "style", "product_key", "count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["waist", 28], ["length", 32], ["product_id", 4], ["style", " stone cutters"], ["product_key", 4], ["count", 14], ["created_at", "2018-04-23 12:09:23.451523"], ["updated_at", "2018-04-23 12:09:23.451523"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."product_key" = $1 LIMIT $2[0m  [["product_key", 4], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "items" ("waist", "length", "product_id", "style", "product_key", "count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["waist", 28], ["length", 32], ["product_id", 4], ["style", " graham slackers"], ["product_key", 4], ["count", 25], ["created_at", "2018-04-23 12:09:23.455443"], ["updated_at", "2018-04-23 12:09:23.455443"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."product_key" = $1 LIMIT $2[0m  [["product_key", 4], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "items" ("waist", "length", "product_id", "style", "product_key", "count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["waist", 28], ["length", 32], ["product_id", 4], ["style", " blackjacks"], ["product_key", 4], ["count", 65], ["created_at", "2018-04-23 12:09:23.458477"], ["updated_at", "2018-04-23 12:09:23.458477"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."product_key" = $1 LIMIT $2[0m  [["product_key", 4], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "items" ("waist", "length", "product_id", "style", "product_key", "count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["waist", 28], ["length", 32], ["product_id", 4], ["style", " jetstrams"], ["product_key", 4], ["count", 84], ["created_at", "2018-04-23 12:09:23.461343"], ["updated_at", "2018-04-23 12:09:23.461343"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."product_key" = $1 LIMIT $2[0m  [["product_key", 4], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "items" ("waist", "length", "product_id", "style", "product_key", "count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["waist", 28], ["length", 32], ["product_id", 4], ["style", " blue"], ["product_key", 4], ["count", 13], ["created_at", "2018-04-23 12:09:23.463980"], ["updated_at", "2018-04-23 12:09:23.463980"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."product_key" = $1 LIMIT $2[0m  [["product_key", 4], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "items" ("waist", "length", "product_id", "style", "product_key", "count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["waist", 28], ["length", 36], ["product_id", 4], ["style", " jet blues"], ["product_key", 4], ["count", 8], ["created_at", "2018-04-23 12:09:23.472300"], ["updated_at", "2018-04-23 12:09:23.472300"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."product_key" = $1 LIMIT $2[0m  [["product_key", 4], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "items" ("waist", "length", "product_id", "style", "product_key", "count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["waist", 28], ["length", 36], ["product_id", 4], ["style", " grey dogs"], ["product_key", 4], ["count", 80], ["created_at", "2018-04-23 12:09:23.474748"], ["updated_at", "2018-04-23 12:09:23.474748"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."product_key" = $1 LIMIT $2[0m  [["product_key", 4], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "items" ("waist", "length", "product_id", "style", "product_key", "count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["waist", 28], ["length", 36], ["product_id", 4], ["style", " stone cutters"], ["product_key", 4], ["count", 36], ["created_at", "2018-04-23 12:09:23.477261"], ["updated_at", "2018-04-23 12:09:23.477261"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."product_key" = $1 LIMIT $2[0m  [["product_key", 4], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "items" ("waist", "length", "product_id", "style", "product_key", "count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["waist", 28], ["length", 36], ["product_id", 4], ["style", " graham slackers"], ["product_key", 4], ["count", 78], ["created_at", "2018-04-23 12:09:23.480209"], ["updated_at", "2018-04-23 12:09:23.480209"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."product_key" = $1 LIMIT $2[0m  [["product_key", 4], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "items" ("waist", "length", "product_id", "style", "product_key", "count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["waist", 28], ["length", 36], ["product_id", 4], ["style", " blackjacks"], ["product_key", 4], ["count", 50], ["created_at", "2018-04-23 12:09:23.482937"], ["updated_at", "2018-04-23 12:09:23.482937"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."product_key" = $1 LIMIT $2[0m  [["product_key", 4], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "items" ("waist", "length", "product_id", "style", "product_key", "count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["waist", 28], ["length", 36], ["product_id", 4], ["style", " jetstrams"], ["product_key", 4], ["count", 4], ["created_at", "2018-04-23 12:09:23.485695"], ["updated_at", "2018-04-23 12:09:23.485695"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."product_key" = $1 LIMIT $2[0m  [["product_key", 4], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "items" ("waist", "length", "product_id", "style", "product_key", "count", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["waist", 28], ["length", 36], ["product_id", 4], ["style", " blue"], ["product_key", 4], ["count", 53], ["created_at", "2018-04-23 12:09:23.488819"], ["updated_at", "2018-04-23 12:09:23.488819"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m

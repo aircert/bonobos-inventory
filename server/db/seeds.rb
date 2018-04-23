@@ -1,5 +1,8 @@
+require 'pp'
 require 'csv'
 
+# Future plan (use upsert strategy; Only create if product names are different prevents duplicates)
+puts "Seeding"
 @csv_text = File.read(Rails.root.join('db', 'csv', 'products.csv'))
 
 @csv = CSV.parse(@csv_text, :headers => true).map{|row| row.to_h}
@@ -7,7 +10,8 @@ require 'csv'
 @rows = @csv.map{|row| row.to_h}
 
 @rows.each_with_index do |row, key|
-	Product.create!(row.to_h)
+	p = Product.create!(row.to_h)
+	puts "Product #{p.product_name} imported"
 end
 
 @csv_text = File.read(Rails.root.join('db', 'csv', 'inventory.csv'))
@@ -18,5 +22,6 @@ end
 
 @rows.each_with_index do |row, key|
 	product = Product.find_by(product_key: row['product_key'])
-	product.items.create!(row.to_h)
+	item = product.items.create!(row.to_h)
+	puts "Item for #{product.product_name} imported"
 end
