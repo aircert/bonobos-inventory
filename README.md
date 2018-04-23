@@ -1,9 +1,9 @@
 # Build/Install  
 1. `git clone https://github.com/aircert/bonobos-inventory.git`
-    - Two folders under bonobos-inventory
+    - Two folders under bonobos-inventory `cd bonobos-inventory`
 2. Rails 5 API is located in server folder 
-    - `rails db:seed` - loads in the two .csv files to database
-    - Start with `cd server && rails s --port 3000` (listens on port 3000)
+    - `cd server && rails db:migrate db:seed` - loads in the two .csv files to database
+    - Start with `rails s --port 3000` (listens on port 3000)
 3. React client is in the client folder
     - Start with `cd client && npm start` (listens on port 3001)
 
