@@ -18,7 +18,7 @@ RSpec.describe 'Items API' do
       end
 
       it 'returns all product items' do
-        expect(json.size).to eq(20)
+        expect(json['items'].size).to eq(20)
       end
     end
 

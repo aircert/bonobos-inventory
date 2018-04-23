@@ -1,9 +1,9 @@
 import React from 'react';
-import { Container, Jumbotron, Button } from 'reactstrap';
+import { Container, Jumbotron } from 'reactstrap';
 
 const Header = (props) => {
   return (
-    <div>
+    <div className="header">
       <Container>
         <Jumbotron>
           <h1 className="display-3">Bonobos Inventory</h1>

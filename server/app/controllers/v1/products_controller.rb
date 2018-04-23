@@ -5,6 +5,7 @@ module V1
    
     # GET /products
     def index
+      # Pagination implemented on backend. Needs to be tested in RSPEC and implemented on client
       @products = Product.search(product_name: params[:product_name]).paginate(page: params[:page], per_page: 20)
       # Total count helps with testing the product name search with washed chimps
       json_response({total_count: @products.count, products: @products})

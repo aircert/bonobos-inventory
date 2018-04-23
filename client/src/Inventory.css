@@ -7,8 +7,6 @@
   margin-bottom: 20px;
 }
 
-.product .description {}
-
-/*product .button-div {
-	display: inline-block;
-}*/
+.loading {
+	text-align: center;
+}

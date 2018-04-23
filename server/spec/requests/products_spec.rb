@@ -4,17 +4,25 @@ require 'rails_helper'
 RSpec.describe 'Products API', type: :request do
   # initialize test data 
   let!(:products) { create_list(:product, 10, product_key: 2) }
+  let(:product) { create(:product, product_name: 'washed chinos', product_key: 2) }
   let(:id) { products.first.id }
 
   # Test suite for GET /products
   describe 'GET /products' do
+    
     # make HTTP get request before each example
     before { get '/products' }
 
     it 'returns products' do
       # Note `json` is a custom helper to parse JSON responses
-      expect(json).not_to be_empty
-      expect(json.size).to eq(10)
+      expect(json['total_count']).to eq(10)
+    end
+
+    it 'return products with product_name as washed chimps' do
+      get '/products?product_name=washed chimps'
+      byebug
+      # Note `json` is a custom helper to parse JSON responses
+      expect(product.product_name).to eq(json['products'][0]['product_name'])
     end
 
     it 'returns status code 200' do
