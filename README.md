@@ -6,7 +6,7 @@
     - `rails db:migrate db:seed` - loads in the two .csv files to database
     - `rails s --port 3000` (listens on port 3000)
 3. React client is in the client folder
-    - `cd client && npm install start` (listens on port 3001)
+    - `cd client && npm install && npm start` (listens on port 3001)
 
 
 # Approach
