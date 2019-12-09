@@ -17,6 +17,14 @@ Make sure you have rails -v Rails 5.1.6 and ruby -v ruby 2.4.1
     - `bundle exec rspec` in server folder. Search test is failing.
 
 
+# Goal #1: Load the product and inventory data into a database
+- Create a database for the data in products.csv and inventory.csv
+- products.csv contains a list of products and inventory.csv lists the inventory count for those products in various sizes and styles
+- Load the data into a database
+
+# Goal #2: Make an HTTP API to search the data
+- Create an HTTP API to search the data you loaded into the database in Goal #1 by product name.
+
 # Approach
 
 My approach is to use the product_id as `product_key` as the foreign key to correlate the two csv files. 
